@@ -17,21 +17,3 @@
  */
 
 
-#define FULL_FLAVOR
-#ifdef FULL_FLAVOR
-
-#import <Flutter/Flutter.h>
-#import <mobileffmpeg/MobileFFmpegConfig.h>
-
-/**
- * Flutter FFmpeg Plugin
- */
-@interface FlutterSoundFFmpeg : NSObject<FlutterPlugin,FlutterStreamHandler,LogDelegate,StatisticsDelegate> {
-        FlutterSoundFFmpeg* flutterSoundFFmpeg; // Singleton
-}
-
-@end
-
-extern void FlutterSoundFFmpegReg(NSObject<FlutterPluginRegistrar>* registrar);
-
-#endif // FULL_FLAVOR
